@@ -1,0 +1,31 @@
+// Effets des vagues
+@keyframes riviereSlide {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 100vw;
+    }
+}
+
+@keyframes riviereSlideDark {
+    0% {
+        background-position-x: 25vw;
+    }
+    100% {
+        background-position-x: 125vw ;
+    }
+}
+
+// Flottement nuage 
+@keyframes float {
+  0% { transform: translatY(0px); }
+  50% { transform: translateY(10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes giggle {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(10deg) }
+  100% { transform: rotate(0deg); }
+}

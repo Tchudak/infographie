@@ -1,0 +1,53 @@
+/*
+    VARIABLES
+*/
+$white : #FFFFFF;
+$black : #000000;
+
+$blueLighter : #DBEDEF;
+$blueLight : #A4D1D6;
+$blue : #67B2BB;
+$blueDark : #017F8D;
+$blueDarker : #055169;
+
+$cream : #F3E3C5;
+$brown : #8C6239;
+
+$yellow : #E8B14A; 
+// MANQUE LES NUANCES
+
+/*
+    BODY
+*/
+html {
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: $white;
+}
+
+::-webkit-scrollbar-track {
+}
+
+::-webkit-scrollbar-thumb {
+    background: $blueDarker;
+}
+
+
+/*
+    BASE
+*/
+@import "base/fonts";
+@import "base/reset";
+@import "base/info";
+@import "base/keyframes";
+
+/*
+    LAYOUT
+*/
+@import "layout/header";
+@import "layout/footer";
+@import "layout/danger";
+@import "layout/consomme";
+@import "layout/gourmand";

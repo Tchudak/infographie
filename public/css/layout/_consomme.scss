@@ -1,0 +1,160 @@
+.consomme{
+    padding: 100px 0;
+    height: 100vh;
+    position : relative;
+
+    & h2 {
+        padding: 2rem;
+        text-align: center;
+        color : $yellow;
+        font-size: 2.8rem;
+        font-weight: 700;
+        
+        & span {
+            -webkit-text-stroke: 2px $yellow;
+            text-stroke: 2px $yellow;
+            color: transparent;
+        }
+    }
+
+    &__robinet {
+        position: absolute;
+        width: 15%;
+        left: -3%;
+        margin-top: -10%;
+        width : 18%;
+        z-index : 300;
+        & img {
+            max-width: 100%;
+        }
+    }
+        
+    &__container {
+        padding-top: 2rem;
+        display: flex;
+        gap: 20%;
+        width: 80%;
+        margin: 0 auto;
+        justify-content: center;
+        flex-wrap : wrap;
+
+        &__chartCtn {
+            font-size: 1.8rem;
+            color: $yellow;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // margin-left: 25rem;
+            // margin-top: 10rem;
+            width : 38%;
+
+            & #infoContent {
+                transform: translateX(calc(-100% + 30px));
+            }
+            & span {
+                font-weight: 400;
+
+            }
+
+            & p {
+                    font-size: 1rem;
+                    margin-top: 4%;
+                    color: $yellow; 
+                }
+
+            &__diagramme {
+                // margin-left: -20%;
+                width: 100%;
+                margin-top: 2%;
+                &__chart {
+                    width : 700px;
+                    height : 500px;
+                    z-index : -2;
+                }  
+            }
+        }
+
+    }
+
+    &__deco {
+        &__prairie {
+            width: 100%;
+            position : absolute;
+            bottom : -8%; 
+            left : 0;
+        }
+        &__vache {
+            position: absolute;
+            margin-bottom: -5%;
+            margin-left: 30%;
+            animation : giggle 3s ease-in-out infinite;
+        }
+    }
+}
+
+
+
+
+.chartBox {
+    width: 80%;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+
+
+
+
+.abreuvement {
+    position: absolute;
+    margin-top: -15% !important;
+    margin-left: 85%;
+    border-bottom: $yellow solid 2px;
+  }
+
+  .elevage {
+    position: absolute;
+    margin-top: -62% !important;
+    margin-left: -20%;
+    border-bottom: $yellow solid 2px;
+  }
+
+  .entretien {
+    position: absolute;
+    margin-top: -80% !important;
+    margin-left: -21%;
+    border-bottom: $yellow solid 2px;
+  }
+
+
+
+
+  .trait_elevage {
+    width: 5.7rem;
+    border: #E8B14A solid 1px;
+    display: block;
+    position: absolute;
+    margin-left: -10%;
+    margin-top: -56%;
+    rotate: 25deg;
+  }
+
+  .trait_entretien {
+    width: 4rem;
+    border: $yellow solid 1px;
+    display: block;
+    position: absolute;
+    margin-left: 9.2%;
+    margin-top: -74.8%;
+    rotate: 26.5deg;
+  }
+
+  .trait_abreuvement {
+    width: 5.1rem;
+    border: #E8B14A solid 1px;
+    display: block;
+    position: absolute;
+    margin-top: -14.1%;
+    margin-left: 71.4%;
+    rotate: 15deg;
+}

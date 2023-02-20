@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <script src=" https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0" defer></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/main.js" defer></script>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <script src="./js/parallax.js" defer></script>
+    <title>L'eau est en danger</title>
+    
+</head>
+<body>
+    <!-- *******************************************  HEADER -->
+    <header class="header">
+        <div class="header__bar"> </div>
+        <!-- *** TITRE + CHAPO -->
+        <div class="header__content">
+            <h1>Moins de viande <br> <b> dans votre assiette </b><br> Plus <span> d’eau </span> <br><b> dans votre <span> carafe </span> </b></h1>
+            <p>Même si l’eau recouvre une grande partie de notre Terre, l’eau douce, elle, n’en représente que 3%. Aujourd’hui, la pollution, le gaspillage et le changement climatique la rendent rare et donc précieuse. Mais saviez-vous que la viande dans votre assiette menaçait également notre eau ? <br> <br> Ce site infographique offre un aperçu instructif sur les enjeux cruciaux liés à la consommation de viande et son impact sur l’eau.</p>
+        </div>
+        
+        <!-- *** NUAGES -->
+        <div class="header__cloud header__cloud--2">
+            <img src="./img/nuage_journal.png" alt="">
+            <img src="./img/nuage_journal.png" alt="">
+        </div> 
+
+         <div class="header__cloud header__cloud--3">
+            <img src="./img/cloud_condensation.png" alt="">
+        </div> 
+
+        <!-- *** MONTAGNES ET MER -->
+        <div class="header__paysage">
+            <div class="header__paysage__elem header__paysage__elem--rb" id="parallax" data-parallax=".2"><div class="header__paysage__elem__bg header__paysage__elem__bg--light"></div></div>
+            <img src="./img/montagne_back_details.png" alt="" class="header__paysage__elem header__paysage__elem--mb" id="parallax" data-parallax=".2">
+            <div class="header__paysage__cloud" >
+                <img src="./img/nuage_journal.png" alt="">
+                <canvas class="header__paysage__elem" id="rainDrop" height="600" width="300"></canvas>
+            </div>
+            <img src="./img/montagne_front.png" alt=""class="header__paysage__elem header__paysage__elem--mf" id="parallax" data-parallax=".4">
+            <div class="header__paysage__elem header__paysage__elem--rf" id="parallax" data-parallax=".5"><div class="header__paysage__elem__bg header__paysage__elem__bg--dark"></div></div>
+            <div class="header__paysage__text" id="parallax" data-parallax=".55">
+
+                <!-- *** TEXTES MER -->
+                <div class="header__paysage__text__title" data-aos="fade-down-right">
+                    <div class="header__paysage__text__title__percent">
+                        40%
+                    </div>
+                    <p>d'eau potable provient<br> de la surface</p>
+                </div>
+                <div class="header__paysage__text__paragraph" data-aos="fade-down-left" data-aos-delay= "300">
+                    <h4 class="header__paysage__text__paragraph__surface">
+                        Eaux de surface
+                    </h4>
+                    <p class="header__paysage__text__paragraph__desc">
+                        Cours d'eau, mers, lacs, sources, rivères, eau de pluie.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="transition__background">
+        <img src="./img/infiltration.jpg" alt="" id="parallax" data-parallax=".6" class="transition">
+    </div>
+
+    <!-- *******************************************  MAIN -->
+    <main>
+        <!-- ************************************************************************  SECTION DANGER -->
+        <section class="danger">
+            <!-- *** WAVE -->
+            <div class="danger__waveContent"> 
+                <div class="danger__waveContent__topwave"></div>
+                <div class="danger__waveContent__wave">
+                    <div class="danger__waveContent__wave__text">
+                        <div class="danger__waveContent__wave__text__title" data-aos="fade-down" data-aos-delay= "500">
+                            <div class="danger__waveContent__wave__text__title__percent">
+                                60%
+                            </div>
+                            <p>d’eau potable provient<br> des eaux souterraines</p>
+                        </div>
+                        <hr class="danger__waveContent__wave__text__hr">
+                        <div class="danger__waveContent__wave__text__paragraph" data-aos="fade-down" data-aos-delay= "800">
+                            <div class="danger__waveContent__wave__text__paragraph__under">
+                                <h4>Eaux souterraines</h4>
+                                <div id="infoButton" class="info-button info-button--blue">
+                                    <svg width="24" height="24" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 0 15 0C6.71573 0 0 6.71573 0 15C0 23.2843 6.71573 30 15 30ZM16.3836 19.54H12.9516V19.176C12.9516 16.03 14.0956 14.6 15.5776 13.274C15.7265 13.1404 15.8726 13.014 16.0135 12.8921C16.8322 12.1842 17.4756 11.6278 17.4756 10.674C17.4756 9.4 16.3576 8.672 15.0316 8.672C13.4196 8.672 12.3276 9.608 12.3016 11.142H8.97359C8.94759 7.762 11.5216 5.5 15.1096 5.5C18.8796 5.5 20.9596 7.996 20.9596 10.7C20.9596 12.026 20.2836 13.482 19.2436 14.444C19.0301 14.637 18.8301 14.813 18.643 14.9775C17.1673 16.2755 16.499 16.8633 16.3836 19.54ZM12.5616 23.154C12.5616 21.958 13.5236 20.996 14.7196 20.996C15.9416 20.996 16.9556 21.958 16.9556 23.18C16.9556 24.402 15.9416 25.364 14.7196 25.364C13.5236 25.364 12.5616 24.35 12.5616 23.154Z"/>
+                                    </svg>
+                                    <div id="infoContent" class="info-content">
+                                        <p class="info-content__text">
+                                            Source : Le Centre d'Information sur l'Eau
+                                            <br>
+                                            <br>
+                                            <b>Alixan BALU</b>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="danger__waveContent__wave__text__paragraph__desc">
+                                Nappes libres, nappes alluviales
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div id="infoButton" class="info-button info-button--blue">
+                    <svg width="24" height="24" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 0 15 0C6.71573 0 0 6.71573 0 15C0 23.2843 6.71573 30 15 30ZM16.3836 19.54H12.9516V19.176C12.9516 16.03 14.0956 14.6 15.5776 13.274C15.7265 13.1404 15.8726 13.014 16.0135 12.8921C16.8322 12.1842 17.4756 11.6278 17.4756 10.674C17.4756 9.4 16.3576 8.672 15.0316 8.672C13.4196 8.672 12.3276 9.608 12.3016 11.142H8.97359C8.94759 7.762 11.5216 5.5 15.1096 5.5C18.8796 5.5 20.9596 7.996 20.9596 10.7C20.9596 12.026 20.2836 13.482 19.2436 14.444C19.0301 14.637 18.8301 14.813 18.643 14.9775C17.1673 16.2755 16.499 16.8633 16.3836 19.54ZM12.5616 23.154C12.5616 21.958 13.5236 20.996 14.7196 20.996C15.9416 20.996 16.9556 21.958 16.9556 23.18C16.9556 24.402 15.9416 25.364 14.7196 25.364C13.5236 25.364 12.5616 24.35 12.5616 23.154Z"/>
+                    </svg>
+                    <div id="infoContent" class="info-content">
+                        <p class="info-content__text">
+                            Source : Le Centre d'Information sur l'Eau
+                        </p>
+                    </div>
+                </div> -->
+                <div class="danger__waveContent__div" data-aos="zoom-in-down"  data-aos-delay= "500"> 
+                    <img class="danger__waveContent__div__bulle"src="./img/nappe.png" src="">
+                    
+                    <p> En 2017 plus de <br>
+                        <b> 
+                            300 substances 
+                        </b> 
+                        actives de pesticides ont été retrouvées dans les eaux  souterraines 
+                    </p>
+                    
+                    <img class="danger__waveContent__div__bact danger__waveContent__div__bact--1" src="./img/svg/bacterie1.svg" alt="">
+                    <img class="danger__waveContent__div__bact danger__waveContent__div__bact--2" src="./img/svg/bacterie1.svg" alt="">
+                </div>  
+            </div>
+            
+            <!-- *** TEXTE EAU DANGER -->
+            <div class="danger__divContent"> 
+                <h2>L'eau est en <span> danger </span></h2>
+                <p>Notre Terre est composée à <br> <b> 70% </b> d'eau</p>
+                <div>
+                    <img data-aos="fade-right"  data-aos-delay= "500"src="./img/svg/eausalee.svg" alt="">
+                    <img data-aos="fade-left"  data-aos-delay= "600" src="./img/svg/eaudouce.svg" alt="">
+                </div>
+            </div>
+
+            <!-- *** TEXTE POISSON QUALITE -->
+            <div class="danger__qualite">
+                <img src="./img/poisson.png" alt="poisson">
+                <div>
+                    <div class="danger__qualite__title">
+                        <h3>La qualité des cours d'eau en 2015</h3>
+                        <div id="infoButton" class="info-button info-button--blue">
+                            <svg width="24" height="24" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 0 15 0C6.71573 0 0 6.71573 0 15C0 23.2843 6.71573 30 15 30ZM16.3836 19.54H12.9516V19.176C12.9516 16.03 14.0956 14.6 15.5776 13.274C15.7265 13.1404 15.8726 13.014 16.0135 12.8921C16.8322 12.1842 17.4756 11.6278 17.4756 10.674C17.4756 9.4 16.3576 8.672 15.0316 8.672C13.4196 8.672 12.3276 9.608 12.3016 11.142H8.97359C8.94759 7.762 11.5216 5.5 15.1096 5.5C18.8796 5.5 20.9596 7.996 20.9596 10.7C20.9596 12.026 20.2836 13.482 19.2436 14.444C19.0301 14.637 18.8301 14.813 18.643 14.9775C17.1673 16.2755 16.499 16.8633 16.3836 19.54ZM12.5616 23.154C12.5616 21.958 13.5236 20.996 14.7196 20.996C15.9416 20.996 16.9556 21.958 16.9556 23.18C16.9556 24.402 15.9416 25.364 14.7196 25.364C13.5236 25.364 12.5616 24.35 12.5616 23.154Z"/>
+                            </svg>
+                            <div id="infoContent" class="info-content">
+                                <p class="info-content__text">
+                                    L’indice « poisson rivière » (IPR) renseigne cette qualité écologique en évaluant l’écart entre un peuplement théorique de référence et le peuplement inventorié. <br>
+                                    Source : EAU FRANCE
+                                    <br>
+                                    <br>
+                                    <b>Baptiste FABRE</b>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Les poissons sont sensibles aux perturbations qui altèrent la qualité écologique d’un cours d’eau : dégradation des habitats, présence d’obstacles, pollution de l’eau, etc.</p>  
+                </div>
+            </div>
+
+            <!-- *** FRISE RIVIERE -->
+            <div class="danger__riviereContent">
+                <img class="danger__riviereContent__riviere" src="./img/svg/riviere_crop.svg" alt="">
+            </div>  
+        </section>
+
+        <!-- ***************************************************************************  SECTION CONSOMMATION -->
+        <section class="consomme">
+            <h2>Qui consomme le plus <span>d'eau ?</span></h2>
+            <!-- ROBINET-->
+            <div class="consomme__robinet">
+                <img src="./img/bar_robinet.png" alt="">
+            </div>
+
+            
+            <div class="consomme__container">
+                <!-- DIAGRAMME EN BARRE--> 
+                <div class="consomme__container__chartCtn" data-aos="fade-up-right" data-aos-delay= "500">
+                    <h3>Consommation d'eau <br> <span>non recyclé en France en 2018</span></h3>
+                    <div id="infoButton" class="info-button info-button--yellow">
+                        <svg width="24" height="24" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 0 15 0C6.71573 0 0 6.71573 0 15C0 23.2843 6.71573 30 15 30ZM16.3836 19.54H12.9516V19.176C12.9516 16.03 14.0956 14.6 15.5776 13.274C15.7265 13.1404 15.8726 13.014 16.0135 12.8921C16.8322 12.1842 17.4756 11.6278 17.4756 10.674C17.4756 9.4 16.3576 8.672 15.0316 8.672C13.4196 8.672 12.3276 9.608 12.3016 11.142H8.97359C8.94759 7.762 11.5216 5.5 15.1096 5.5C18.8796 5.5 20.9596 7.996 20.9596 10.7C20.9596 12.026 20.2836 13.482 19.2436 14.444C19.0301 14.637 18.8301 14.813 18.643 14.9775C17.1673 16.2755 16.499 16.8633 16.3836 19.54ZM12.5616 23.154C12.5616 21.958 13.5236 20.996 14.7196 20.996C15.9416 20.996 16.9556 21.958 16.9556 23.18C16.9556 24.402 15.9416 25.364 14.7196 25.364C13.5236 25.364 12.5616 24.35 12.5616 23.154Z"/>
+                        </svg>
+                        <div id="infoContent" class="info-content">
+                            <p class="info-content__text">
+                                Source : OFB, BNPE
+                                <br>
+                                <br>
+                                <b>Anthony HUOT</b>
+                            </p>
+                        </div>
+                    </div>
+            
+                    <div class="consomme__container__chartCtn__diagramme">
+                        <!--Diagramme canvas -->
+                        <div class="consomme__container__chartCtn__diagramme__chart">
+                            <canvas id="cookieChart" style="width: 100%"></canvas>
+                        </div>
+                                     
+                    </div>
+                </div>
+
+                <!-- CAMEMBERT -->
+                <div class="consomme__container__chartCtn" data-aos="fade-up-left" data-aos-delay= "600">
+                    <h3>À quoi sert l'eau dans <span>l'agriculture ?</span></h3>
+                    <div id="infoButton" class="info-button info-button--yellow">
+                        <svg width="24" height="24" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 0 15 0C6.71573 0 0 6.71573 0 15C0 23.2843 6.71573 30 15 30ZM16.3836 19.54H12.9516V19.176C12.9516 16.03 14.0956 14.6 15.5776 13.274C15.7265 13.1404 15.8726 13.014 16.0135 12.8921C16.8322 12.1842 17.4756 11.6278 17.4756 10.674C17.4756 9.4 16.3576 8.672 15.0316 8.672C13.4196 8.672 12.3276 9.608 12.3016 11.142H8.97359C8.94759 7.762 11.5216 5.5 15.1096 5.5C18.8796 5.5 20.9596 7.996 20.9596 10.7C20.9596 12.026 20.2836 13.482 19.2436 14.444C19.0301 14.637 18.8301 14.813 18.643 14.9775C17.1673 16.2755 16.499 16.8633 16.3836 19.54ZM12.5616 23.154C12.5616 21.958 13.5236 20.996 14.7196 20.996C15.9416 20.996 16.9556 21.958 16.9556 23.18C16.9556 24.402 15.9416 25.364 14.7196 25.364C13.5236 25.364 12.5616 24.35 12.5616 23.154Z"/>
+                        </svg>
+                        <div id="infoContent" class="info-content">
+                            <p class="info-content__text">
+                                Source : livre “l’eau en milieu agricole”, Delphine Leenhardt, Marc Voltz et Olivier Barreteau 
+                                <br>
+                                <br>
+                                <b>Lilia DEBIEVE</b>
+                            </p>
+                        </div>
+                    </div>
+                        <div class="chartBox">
+                            <canvas id="pieChart" style="width: 100%">
+                            </canvas>
+                            <p class="entretien"style="color: #be9039">Entretien des batiments</p>
+                            <span class="trait_entretien"></span>
+
+                            <p  class="elevage" style="color: #be9039">Elevage</p>
+                            <span class="trait_elevage"></span>
+
+                            <p class="abreuvement" style="color: #be9039">Abreuvement</p>
+                            <span class="trait_abreuvement"></span>
+                        </div>
+                    <p>L'élevage industriel contribue à gaspiller l'eau, il <br> pollue les eaux car il rejette dans l'environnement <br> des quantités importantes de nitrate, du <br> phosphore mais aussi des antibiotiques et autres polluants.</p>
+        
+                </div>
+            </div>
+
+            <div class="consomme__deco">
+                <div class="consomme__deco__prairie">
+                    <img src="./img/Prairie.png" alt="">
+                </div>
+                <img class="consomme__deco__vache" src="./img/vache_journal.png" alt="">
+            </div>
+        </section>
+
+        <!-- *********************************************************************  SECTION GOURMANDISE -->
+        <section class="gourmand">
+            <!-- *** TEXTES -->
+            <div class="gourmand__content">
+                <div class="gourmand__content__title">
+                    <h2>Qui est <span>le plus gourmand</span> dans notre assiette ?</h2>
+                    <div id="infoButton" class="info-button info-button--blue">
+                        <svg width="24" height="24" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 0 15 0C6.71573 0 0 6.71573 0 15C0 23.2843 6.71573 30 15 30ZM16.3836 19.54H12.9516V19.176C12.9516 16.03 14.0956 14.6 15.5776 13.274C15.7265 13.1404 15.8726 13.014 16.0135 12.8921C16.8322 12.1842 17.4756 11.6278 17.4756 10.674C17.4756 9.4 16.3576 8.672 15.0316 8.672C13.4196 8.672 12.3276 9.608 12.3016 11.142H8.97359C8.94759 7.762 11.5216 5.5 15.1096 5.5C18.8796 5.5 20.9596 7.996 20.9596 10.7C20.9596 12.026 20.2836 13.482 19.2436 14.444C19.0301 14.637 18.8301 14.813 18.643 14.9775C17.1673 16.2755 16.499 16.8633 16.3836 19.54ZM12.5616 23.154C12.5616 21.958 13.5236 20.996 14.7196 20.996C15.9416 20.996 16.9556 21.958 16.9556 23.18C16.9556 24.402 15.9416 25.364 14.7196 25.364C13.5236 25.364 12.5616 24.35 12.5616 23.154Z"/>
+                        </svg>
+                        <div id="infoContent" class="info-content">
+                            <p class="info-content__text">
+                                Source : FAO, The state of food and agriculture 2020
+                                <br> <br>
+                                <b> Anna Testud </b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <p>Que ce soient de la viande, des légumes ou des céréales, l'eau est nécessaire à la production. Chaque aliment possède une demande en eau qui lui est propre.</p>
+            </div>
+
+            <!-- *** GRAPHIQUES -->
+            <div class="gourmand__info">
+                <div data-aos="fade-up" data-aos-delay= "500"> <img src="./img/conso_vache.png" alt="conso_vache"> </div>
+                <div data-aos="fade-up"   data-aos-delay= "600"> <img src="./img/conso_porc.png" alt="conso_porc"></div>
+                <div data-aos="fade-up"   data-aos-delay= "700"><img src="./img/conso_ble.png" alt="conso_ble"> </div>
+                <div data-aos="fade-up"   data-aos-delay= "800"><img src="./img/conso-leg.png" alt="conso_leg"> </div>
+            </div>
+            <div class="gourmand__solution">
+                <h3>Quelle solution ?</h3>
+                <video src=""></video>
+            </div>
+        </div>
+        </section>
+    </main>
+
+    <!-- ***********************************************************************************  FOOTER -->
+    <footer class="footer">
+        <p> Réalisé par les étudiants de MMI2 - BALU Alixan - DEBIEVE Lilia - FABRE Baptiste - HUOT Anthony - TESTUD Anna </p>
+    </footer>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

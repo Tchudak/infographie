@@ -1,0 +1,198 @@
+.danger {
+    background-color : #ECD3A4;
+    min-height : 100vh;
+    position : relative;
+    padding : 0 0 150px 0;
+
+    & img {
+        user-select: none;
+        z-index: 1  ;
+    }
+
+    &__waveContent {
+            position : relative;
+            width : 100%;
+            margin-top: -30px;
+
+            & #infoButton {
+                margin: auto;
+                z-index: 5000;
+            }
+
+            &__topwave {
+                position: absolute;
+                margin-top: -30px;
+                z-index: 11;
+
+                width: 100vw;
+                height: 200px;
+                background: url(../img/svg/wave.svg);
+                background-size: 100vw;
+                background-repeat: repeat no-repeat;
+                animation: riviereSlideDark 5s linear infinite;
+            }
+
+            &__wave {
+                width : calc(100vw - 8px);
+                margin: auto;
+                height: 285px;
+                background: url(../img/svg/wave-to-danger.svg) ;
+                background-repeat: repeat-x;
+                background-size: contain;
+                
+                &__text {
+                    display: flex;
+                    gap: 1rem;
+                    position: relative;
+                    margin: auto;
+                    color: $white;
+                    width: 80%;
+                    z-index: 20;
+                    top : 100px;
+
+                    &__title {
+                        display: flex;
+                        gap: 1rem;
+                        font-size: 1.5rem;
+    
+                        &__percent {
+                            font-size: 3rem;
+                            font-weight: bold;
+                        }
+                    }
+    
+                    &__hr {
+                        width: 4px;
+                        height: 64px;
+                        background-color: #438F9F;
+                        border-radius: 5px;
+                        border: none;
+                    }
+
+                    &__paragraph {
+                        font-size: 1.5rem;
+
+                        &__under {
+                            font-weight: bold;
+                            display: flex;
+                            gap: 1rem;
+                        }
+                    }
+                }
+
+            }
+            &__div {
+                position : absolute;
+                top : 72%;
+                right : 15%;
+                width : 30%;
+
+                &__bulle {
+                    max-width: 100%;
+                }
+
+                & p {
+                color : white;
+                width : 70%;
+                position : absolute;
+                top : 50%;
+                right : 8%;   
+                line-height : 22px;            
+                }
+                & b {
+                    font-weight: 700;
+                    font-size:1.5rem;
+                    line-height : 32px;    
+                    color : $blueDarker;
+                    display: flex;
+                }
+                &__bact {
+                    position : absolute;
+                    &--1 {
+                        right : 9%;
+                        top : 33%;
+                        animation: float 1.7s ease-in-out infinite;
+                    }
+                    &--2 {
+                        right : 0;
+                        top : 50%;
+                        width : 10%;
+                        animation: float 2s ease-in-out infinite;
+                    }
+                }
+            }       
+        }
+        
+    &__divContent {
+        width : 60%;
+        margin-left : 10%;
+        margin-top : 50px;
+
+        & h2 {
+            font-size : 2.5rem;
+            font-weight: 700;
+            color : $blueDarker;
+            & span {
+                -webkit-text-stroke: 2px $blueDarker;
+                text-stroke: 2px $blueDarker;
+                color: transparent;
+            }
+        }
+        & p {
+            font-size : 1rem;
+            color : $blueDarker;
+            line-height : 25px;
+            margin-top : 10px;
+            & b {
+                font-size : 1.3rem;
+                font-weight : 700;
+            }     
+        }
+        & img {
+            &:first-child {
+                margin-left : 150px;
+            }
+        }
+
+    }
+    &__qualite {
+        display : flex;
+        align-items: center;
+        margin-left : 5%;
+        position : relative;
+        top : -30px;
+
+        &__title {
+            display: flex;
+            gap: 1rem;
+        }
+
+        & img {
+            width : 15%;
+            animation : giggle 1s ease-in-out infinite;
+        }
+        & h3 {
+            font-size : 1.8rem;
+            font-weight: 700;
+            color : $blueDarker;
+        }
+        & p {
+            font-size : 1rem;
+            color : $blueDarker;
+            line-height : 22px;
+           width : 50%; 
+           margin-top : 10px;
+        }
+    }
+
+    &__riviereContent {
+        position : absolute;
+        bottom : -70px;
+        left : 0;
+        &__riviere {
+            width: 100vw;
+        }
+    }
+    
+}
+

@@ -1,0 +1,228 @@
+.header {
+    height : 200vh;
+    width : 100%;
+    display : flex;
+    justify-content : center;
+    position : relative;
+    padding-top : 180px;
+
+
+    &__bar {
+        background-color : $blueDarker;
+        position : absolute;
+        top : 0;
+        left : 0;
+        width : 100%;
+        height : 25px;
+    }
+
+    &__content {
+        width : 85%;
+        display : flex;
+        flex-direction : column;
+        gap : 60px;
+
+        & h1 {
+            font-size : 4rem;
+            width : 85%;
+            align-self : flex-start;
+            font-weight: 700;
+            font-style: normal;
+            color : $blueDarker;
+            & b {
+                font-size : 3rem;
+            }
+            & span {
+                -webkit-text-stroke: 2px $blueDarker;
+                text-stroke: 2px $blueDarker;
+                color: transparent;
+            }
+            
+        }
+        & p {
+            width : 50%;
+            align-self : flex-end;
+            color : $blueDarker;
+            line-height : 25px;
+            z-index: 50;
+            font-size : 1rem;
+        }
+    }
+    &__cloud {
+            display: flex;
+            flex-direction: column;
+            gap: -2rem;
+            align-items: center;
+            position : absolute;
+
+            // &--1{
+            //     top : 35%;
+            //     left : 64%;
+            //     & img {
+            //         width : 60%;
+            //         z-index : 10;
+            //     }
+            //     &  #rainDrop {
+            //         position :relative;
+            //         top : -70px;
+            //         user-select: none;
+            //         z-index : -1;
+            //     }
+            // }
+            &--2 {
+                top : 10%;
+                left : 55%;
+                animation : float 2s ease-in-out infinite;
+                & img:nth-child(1) {
+                    width : 95%;
+                }
+                & img:nth-child(2){
+                    position : absolute;
+                    top : -30px;
+                    left : 60px;
+                    z-index : -1;
+                    -webkit-transform: scaleX(-1);
+                    transform: scaleX(-1);
+                    width : 95%;
+                }
+                
+            }
+            &--3 {
+                top : 30%;
+                left : 5%;
+                animation : float 2.4s ease-in-out infinite;
+                & img:nth-child(1) {
+                    width : 85%;
+                }   
+            }
+    }
+    &__paysage {
+        width: calc(100vw - 8px);
+        height: 100vh;
+        position: absolute;
+        top : 100vh;
+        left : 0;
+
+        &__elem {
+            position: absolute;
+
+            &--mb {
+                width: 80%;
+                bottom: 200px;
+                right: 0;
+                z-index: 1;
+
+            }
+
+            &--mf {
+                width: 57%;
+                bottom: 7%;
+                right: 0;
+                z-index: 3;
+            }
+
+            &--rb {
+                width: 100vw;
+                height: 200px;
+                background: url(../img/svg/wave_dark.svg);
+                background-size: 100vw;
+                background-repeat: repeat no-repeat;
+                bottom: 8%;
+                z-index: 0;
+                animation: riviereSlideDark 4s linear infinite;
+            }
+            &--rf {
+                width: 100vw;
+                height: 200px;
+                background: url(../img/svg/wave.svg);
+                background-size: 100vw;
+                background-repeat: repeat no-repeat;
+                bottom: 0;
+                z-index: 4;
+                animation: riviereSlide 2s linear infinite;
+            }
+
+            &__bg {
+                width : 100vw;
+                height : 250px;
+                position : absolute;
+                top : 50px;
+                height: 300px;
+
+                &--light {
+                    // background-color : $blueDark;
+                    background: linear-gradient(180deg, #017F8D 0%, #3197A3 39.58%, #67B2BB 100%);
+                }
+
+                &--dark {
+                    // background-color : $blue;
+                    background: linear-gradient(180deg, #67B2BB 17.19%, #3F8B9A 56.25%, #055169 100%);
+                }
+            }
+        }
+
+        &__cloud {
+            
+            background-color: red;
+         
+            & img {
+                position: absolute;
+                right: 100px;
+                z-index: 5;
+                bottom: 90%;
+                animation : float 2.2s ease-in-out infinite;
+            }
+        }
+
+        &__text {
+            color: $white;
+            position: absolute;
+            z-index: 5;
+            bottom: 0;
+            padding: 0 0 0 10%;
+
+            &__title {
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+                font-size: 1.5rem;
+
+                &__percent {
+                    font-weight: bold;
+                    font-size: 3rem;
+                }
+            }
+
+            &__paragraph {
+                margin-top: 1rem;
+
+                &__surface {
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+.transition {
+    position: relative;
+    width: 100vw;
+    mask-image: url(../img/svg/wave_mask.svg);
+    mask-size: cover;
+    top: -180px;
+    z-index: 10;
+    background-color: $brown;
+
+    &__background {
+        background-color: $blueDarker;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+#rainDrop  {
+    right: 200px;
+    z-index: 3;
+    bottom: 40%;
+}
